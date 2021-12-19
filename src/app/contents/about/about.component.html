@@ -1,13 +1,12 @@
 <section id="about" class="about">
+  <mat-progress-bar *ngIf="loading" mode="indeterminate"></mat-progress-bar>
   <div class="container">
     <div class="search">
-      <h1>Busque seus dados do github</h1>
-      <input
-        type="text"
-        placeholder="Digite seu nome de usuário github"
-        [(ngModel)]="username"
-      />
-      <button (click)="fetch()">buscar</button>
+      <div class="input-field col s6">
+        <input id="first_name2" type="text" class="validate" [(ngModel)]="username">
+        <label class="active" for="first_name2">Digite o seu usuário do github</label>
+        <button (click)="fetch()" class="waves-effect waves-light btn">buscar</button>
+      </div>
     </div>
     <div class="content-central">
       <div class="content-left">
@@ -15,11 +14,8 @@
         <img *ngIf="user.avatar_url" src="{{user.avatar_url}}" alt="Sem imagem">
       </div>
       <div class="content-right">
-          <h1 *ngIf="user.bio">{{user.bio}}</h1>
-          <h2 *ngIf="user.bio">{{user.location}}</h2>
-          <pre>
-DESCRIÇÃO SOBRE A PESSOA
-          </pre>
+          <h1>{{user.bio}}</h1>
+          <p>{{user.location}}</p>
       </div>
     </div>
   </div>

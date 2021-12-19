@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ServiceGitService } from 'src/app/service/service-git.service';
+import { ServiceGitUserService } from 'src/app/services/service-git-user.service';
 import User from 'src/app/shared/models/user.model';
 
 @Component({
@@ -12,8 +12,10 @@ export class AboutComponent implements OnInit {
   @Input() user: User;
 
   username: string = '';
+  loading: boolean = false;
+  repositories = '';
 
-  constructor(private userService: ServiceGitService) { }
+  constructor(private userService: ServiceGitUserService) { }
 
   ngOnInit(): void {
       this.getUser('RyamSousa');
@@ -21,13 +23,29 @@ export class AboutComponent implements OnInit {
 
   async getUser(name: string): Promise<void>{
     try {
+      this.loading = true;
       this.user = await  this.userService.getUser(name);
+      this.repositories = this.user.repos_url;
+      this.loading = false;
     } catch (error) {
-      console.log(error);
+      this.loading = false;
+      alert("Usuário não encontrado");
     }
   }
 
   async fetch(){
-      this.getUser(this.username);
+      await this.getUser(this.username);
+      this.notFoundAtributes();
+  }
+
+  notFoundAtributes(){
+    this.user.name ? this.user.name : this.user.name = 'Nome não encontrado';
+    this.user.bio ? this.user.bio : this.user.bio = 'Sem informações';
+    this.user.email ? this.user.email : this.user.email = 'E-mail não encontrado';
+  }
+
+
+  getRepositories(): string{
+    return this.repositories;
   }
 }

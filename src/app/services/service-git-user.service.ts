@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class ServiceGitService {
+export class ServiceGitUserService {
 
   constructor(private http: HttpClient) { }
 

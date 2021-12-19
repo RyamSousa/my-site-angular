@@ -1,5 +1,5 @@
 import User from 'src/app/shared/models/user.model';
-import { ServiceGitService } from 'src/app/service/service-git.service';
+import { ServiceGitUserService } from 'src/app/services/service-git-user.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -11,7 +11,7 @@ export class HeaderComponent implements OnInit {
 
   user: User;
 
-  constructor(private userService: ServiceGitService) { }
+  constructor(private userService: ServiceGitUserService) { }
 
   ngOnInit(): void {
     this.getUser('RyamSousa');

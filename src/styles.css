@@ -1,9 +1,11 @@
+
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500;600&display=swap');
 
 :root{
-  --primary-color: #465c4c;
+  --primary-color: #4CAF50;
   --secondary-color: #e3e3e3;
+  --tertiary-color: #4e5259;
 }
 
 html, body{
@@ -54,3 +56,6 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
