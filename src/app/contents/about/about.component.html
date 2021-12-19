@@ -1,0 +1,26 @@
+<section id="about" class="about">
+  <div class="container">
+    <div class="search">
+      <h1>Busque seus dados do github</h1>
+      <input
+        type="text"
+        placeholder="Digite seu nome de usuário github"
+        [(ngModel)]="username"
+      />
+      <button (click)="fetch()">buscar</button>
+    </div>
+    <div class="content-central">
+      <div class="content-left">
+        <h1>{{user.name}}</h1>
+        <img *ngIf="user.avatar_url" src="{{user.avatar_url}}" alt="Sem imagem">
+      </div>
+      <div class="content-right">
+          <h1 *ngIf="user.bio">{{user.bio}}</h1>
+          <h2 *ngIf="user.bio">{{user.location}}</h2>
+          <pre>
+DESCRIÇÃO SOBRE A PESSOA
+          </pre>
+      </div>
+    </div>
+  </div>
+</section>
