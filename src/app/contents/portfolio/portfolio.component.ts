@@ -13,6 +13,8 @@ export class PortfolioComponent implements OnInit, OnChanges {
   @Input()
   user: User;
 
+  splitDate: string[] = [];
+
   repositories: Reposity[];
 
   constructor(private serviceRepositories: ServiceGitRepositoriesService) {
@@ -28,6 +30,16 @@ export class PortfolioComponent implements OnInit, OnChanges {
 
   async loadRepositories(name: string){
     this.repositories = await this.serviceRepositories.getRepositories(name);
+    this.repositories.forEach((r) => {
+      r.created_at = this.formatDate(r.created_at);
+    });
+  }
+
+  formatDate(date: string): string{
+    this.splitDate = date.split('T');
+    date = this.splitDate[0];
+
+    return date;
   }
 
 }

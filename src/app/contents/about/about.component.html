@@ -4,8 +4,8 @@
     <div class="search">
       <div class="input-field col s6">
         <input id="first_name2" type="text" class="validate" [(ngModel)]="username">
-        <label class="active" for="first_name2">Digite o seu usuário do github</label>
-        <button (click)="fetch()" class="waves-effect waves-light btn">buscar</button>
+        <label class="active" for="first_name2">Type your username of github</label>
+        <button (click)="fetch()" class="waves-effect waves-light btn">search</button>
       </div>
     </div>
     <div class="content-central">
@@ -20,3 +20,5 @@
     </div>
   </div>
 </section>
+<app-portfolio [user]="user"></app-portfolio>
+<app-contact></app-contact>

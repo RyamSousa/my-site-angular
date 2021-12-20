@@ -3,9 +3,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500;600&display=swap');
 
 :root{
-  --primary-color: #4CAF50;
-  --secondary-color: #e3e3e3;
-  --tertiary-color: #4e5259;
+  --primary-color: #3d424a;
+  --secondary-color: #fffdfd;
+  --terciary-color: #73bd80;
+  --fonts-color: #6b7079;
 }
 
 html, body{

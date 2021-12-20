@@ -1,13 +1,13 @@
 <section id="portfolio" class="portfolio">
-  <h1>Repositórios: {{user.public_repos}}</h1>
+  <h1 class="number-repos">Public repositories: {{user.public_repos}}</h1>
   <div class="container" *ngFor="let item of repositories;">
     <li *ngIf="!item.private" class="card">
       <div class="card-container">
         <h1>{{item.name}}</h1>
         <p>{{item.description}}</p>
-        <p>Liguagem: {{item.language}}</p>
+        <p>Language: {{item.language}}</p>
         <a href="{{item.svn_url}}" target="_blank">{{item.svn_url}}</a>
-        <span>data de criação: {{item.created_at}}</span>
+        <span>Created at: {{item.created_at}}</span>
       </div>
     </li>
   </div>
