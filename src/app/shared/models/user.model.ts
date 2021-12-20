@@ -1,5 +1,7 @@
 class User{
+  login: string;
   name: string;
+  url: string;
   avatar_url: string;
   company: string;
   email: string;
@@ -7,6 +9,7 @@ class User{
   location: string;
   repos_url: string;
   html_url: string;
+  public_repos: string;
 }
 
 export default User;

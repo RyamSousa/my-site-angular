@@ -7,9 +7,13 @@ import Reposity from '../shared/models/repository.model';
 })
 export class ServiceGitRepositoriesService {
 
+  urlb: string;
+
   constructor(private http: HttpClient) { }
 
-  async getRepositories(url: string): Promise<Reposity>{
-    return this.http.get<Reposity>(`${url}`).toPromise();
+  readonly url = 'https://api.github.com/users/';
+
+  async getRepositories(username: string): Promise<Reposity[]>{
+    return this.http.get<Reposity[]>(`${this.url}${username}/repos`).toPromise();
   }
 }

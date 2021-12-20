@@ -1,4 +1,4 @@
 <app-header></app-header>
-<app-about></app-about>
-<app-portfolio></app-portfolio>
+<app-about #about></app-about>
+<app-portfolio [user]="about.user"></app-portfolio>
 <app-footer></app-footer>
