@@ -21,7 +21,8 @@ import { ContactComponent } from './contact/contact.component';
   ],
   exports: [
     AboutComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    ContactComponent
   ]
 })
 export class ContentsModule { }

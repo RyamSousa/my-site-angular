@@ -11,7 +11,7 @@
 .portfolio h1{
   line-height: 2.8rem;
   font-weight: 600;
-  font-size: 40px;
+  font-size: 1.5rem;
 }
 .container{
   width: 100%;
@@ -38,6 +38,9 @@
 .card-container p{
   font-size: 1.2rem;
 }
+.card-container a{
+  font-style: 0.9rem;
+}
 .card-container span{
   padding: 5px;
 }
@@ -47,4 +50,10 @@
 }
 .number-repos{
   color: var(--secondary-color);
+}
+
+@media screen and (max-width: 768px){
+  .portfolio{
+    margin-top: 11rem;
+  }
 }
