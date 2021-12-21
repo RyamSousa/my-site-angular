@@ -1,17 +1,17 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AboutComponent } from './about/about.component';
+import { InformationsComponent } from './informations/informations.component';
 import { FormsModule } from '@angular/forms';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { PortfolioComponent } from './portfolio/portfolio.component';
-import { ContactComponent } from './contact/contact.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
-    AboutComponent,
+    InformationsComponent,
     PortfolioComponent,
-    ContactComponent
+    AboutComponent
   ],
   imports: [
     CommonModule,
@@ -20,9 +20,9 @@ import { ContactComponent } from './contact/contact.component';
     MatProgressBarModule
   ],
   exports: [
-    AboutComponent,
+    InformationsComponent,
     PortfolioComponent,
-    ContactComponent
+    AboutComponent
   ]
 })
 export class ContentsModule { }
