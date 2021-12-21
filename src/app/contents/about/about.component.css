@@ -23,7 +23,7 @@
   color: var(--fonts-color);
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 480px){
   .about{
     margin-top: 11rem;
   }

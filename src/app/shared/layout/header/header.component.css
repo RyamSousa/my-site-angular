@@ -36,6 +36,7 @@
 
 .options{
     width: 70%;
+    margin-left: 20px;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -75,7 +76,14 @@ a:hover{
 }
 
 .social{
+  padding: 5px;
     font-size: 1.8rem;
     color: var(--secondary-color);
     text-decoration: none;
+}
+
+@media screen and (max-width: 480px){
+  .socialMedia{
+    flex-direction: column;
+  }
 }
